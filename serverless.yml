@@ -1,3 +1,6 @@
+## adding changes for serveles deploy
+app: notes-app-api
+
 # NOTE: update this with your service name
 service: notes-app-api
 
@@ -106,4 +109,3 @@ functions:
 resources:
   # API Gateway Errors
   - ${file(resources/api-gateway-errors.yml)}
-  

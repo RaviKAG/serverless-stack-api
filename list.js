@@ -3,7 +3,7 @@ import dynamoDB from './libs/dynamodb-lib';
 
 export const main = handler(async (event, context) => {
     var params = {
-        TableName: process.env.TableName,
+        TableName: process.env.tableName,
         KeyConditionExpression: "userId = :userId",
         ExpressionAttributeValues: {
             ":userId": event.requestContext.identity.cognitoIdentityId

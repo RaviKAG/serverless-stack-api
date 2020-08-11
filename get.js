@@ -23,7 +23,7 @@ export const main = handler(async (event, context) => {
         throw new Error('Item not found');
     }
 
-    allocMem()
+    allocMem();
 
     return result.Item;
 });

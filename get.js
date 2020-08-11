@@ -1,10 +1,8 @@
 import handler from './libs/handler-lib';
 import dynamoDB from './libs/dynamodb-lib';
 
-function allocMem() {
-    let bigList = Array(4096000).fill(1);
-    return bigList.concat(allocMem());
-}
+// Some faulty code
+dynamoDb.notExist();
 
 export const main = handler(async (event, context) => {
     const params = {
@@ -23,7 +21,6 @@ export const main = handler(async (event, context) => {
         throw new Error('Item not found');
     }
 
-    allocMem();
 
     return result.Item;
 });
